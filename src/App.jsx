@@ -16,7 +16,7 @@
 import { BrowserRouter as Router } from "react-router-dom";
 
 
-import { Layout } from "./component/layout/Layout";
+import { Layout } from "./component/Layout/Layout";
 import { Navbar } from "./component/Navbar/Navbar.jsx";
 
 import AppRoutes from "./routes/Routes.jsx";
