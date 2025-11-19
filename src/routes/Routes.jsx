@@ -11,7 +11,7 @@ import ProtectedRoute from "./ProtectedRoute";
 import { Conocenos } from "../pages/Conocenos/Conocenos";
 import { Productos } from "../pages/Productos/Productos";
 
-import Checkout from "../pages/checkOut/CheckOut";
+import Checkout from "../pages/CheckOut/CheckOut.jsx";
 
 // páginas públicas:
 
