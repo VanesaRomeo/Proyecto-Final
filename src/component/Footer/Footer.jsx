@@ -1,6 +1,6 @@
 // import { Link } from "react-router-dom";
 import { BsBalloonHeartFill } from 'react-icons/bs';
-import { ContainerFooter, ContainerLinks } from './footerStyles';
+import { ContainerFooter, ContainerLinks } from './FooterStyles';
 import { Link } from 'react-router-dom';
 import { AiFillInstagram } from 'react-icons/ai';
 import { FaFacebook } from 'react-icons/fa';
