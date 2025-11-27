@@ -8,7 +8,7 @@ import {
   CheckoutContainer, ErrorText, StyledField, SubmitButton, TextContainer, Title
 } from "./CheckOutStyles"
 import { createOrder } from "../../service/orders";
-import { emptyCart } from "../../Redux/features/cart/cartSlice";
+import { emptyCart } from "../../redux/features/cart/cartSlice";
 
 const validationSchema = Yup.object().shape({
   name: Yup.string().min(3).required(),
