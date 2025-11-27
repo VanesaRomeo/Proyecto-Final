@@ -1,9 +1,9 @@
 // src/pages/Home/Home.jsx
 import { useAuth } from "../../context/AuthContext";
 import { Abount } from "../../component/Abount/Abount";
-import AutoPlay from "../../component/carrousel/Carrousel";
+import AutoPlay from "../../component/Carrousel/Carrousel";
 import { Hero } from "../../component/Hero/Hero";
-import { Product } from "../../component/productos/Product.JSX";
+import { Product } from "../../component/Productos/Product";
 import { HomeConteiner } from "./HomeStyles";
 
 function Home() {
