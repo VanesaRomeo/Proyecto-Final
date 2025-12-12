@@ -24,11 +24,10 @@ const RegisterPage = () => {
     setErrorMsg("");
     try {
       await registerUser(form);
-      // Registrado OK → al login para que el usuario ingrese y verifique
       navigate("/login");
     } catch (e) {
       setErrorMsg(
-        e?.response?.data?.msg || "No se pudo registrar. Probá de nuevo."
+        e?.message || "No se pudo registrar. Probá de nuevo."
       );
     } finally {
       setLoading(false);

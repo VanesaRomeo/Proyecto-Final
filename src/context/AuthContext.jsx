@@ -65,6 +65,36 @@ export const AuthProvider = ({ children }) => {
     }
   };
 
+  // ---- REGISTER ----
+const registerUser = async ({ name, email, password }) => {
+  try {
+    const res = await fetch(`${API}/auth/registro`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        nombre: name,        // 👈 mapeo con lo que espera el back
+        email,
+        contraseña: password // 👈 tiene que llamarse "contraseña"
+      }),
+    });
+
+    const data = await res.json().catch(() => ({}));
+
+    if (!res.ok) {
+      // si el back mandó msg, lo usamos
+      const msg = data?.msg || "No se pudo registrar";
+      throw new Error(msg);
+    }
+
+    // si querés usar la info del usuario creado:
+    return data;
+  } catch (err) {
+    console.error("ERROR registerUser:", err);
+    throw err; // lo re-lanzamos para que lo agarre el catch del RegisterPage
+  }
+};
+
+
   // ---- VERIFY CODE ----
   const verifyCode = async ({ email, code }) => {
     try {
@@ -130,6 +160,7 @@ export const AuthProvider = ({ children }) => {
         verifyCode,        
         resendCode,        
         logout,
+        registerUser
       }}
     >
       {children}
