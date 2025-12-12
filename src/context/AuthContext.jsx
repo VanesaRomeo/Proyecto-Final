@@ -4,8 +4,9 @@ import { createContext, useContext, useEffect, useState } from "react";
 
 const AuthContext = createContext(null);
 export const useAuth = () => useContext(AuthContext);
-
+console.log("VITE_API_URL =>", import.meta.env.VITE_API_URL);
 const API = `${(import.meta.env.VITE_API_URL ?? "http://localhost:3002").replace(/\/+$/, "")}/api`;
+console.log("API =>", API);
 
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
